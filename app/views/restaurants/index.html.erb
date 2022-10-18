@@ -1,0 +1,20 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Restaurants</h1>
+
+<br>
+<%= link_to "Add a new restaurant", new_restaurant_path, class: "btn btn-danger" %>
+<br><br>
+
+<div id="restaurants">
+  <hr>
+  <% @restaurants.each do |restaurant| %>
+    <%= render restaurant %>
+    <p>
+      <%= link_to "Show this restaurant", restaurant, class: "btn btn-primary" %>
+    </p>
+    <hr>
+  <% end %>
+</div>
+
+
