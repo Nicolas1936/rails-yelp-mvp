@@ -15,4 +15,7 @@
   <% end %>
 </ul>
 <br>
-<%= link_to "Add a new review", new_restaurant_review_path(@restaurant), class: "btn btn-primary" %>
+
+<%# <%= link_to "Add a new review", new_restaurant_review_path(@restaurant), class: "btn btn-primary" %>
+
+<%= render "reviews/new", restaurant: @restaurant, review: @review %>
